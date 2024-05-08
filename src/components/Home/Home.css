@@ -1,0 +1,98 @@
+.Uppers{
+    width: 100%;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    place-items: center;
+    padding: 10em 0;
+
+}
+
+.fullName{
+    width: 100%;
+    font-size:clamp(30px,6vw,70px);
+    font-weight: 700;
+    color: #737373;
+    background: url("../../assets/images/nameImage.avif");
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: fade-inout 3s infinite alternate;
+}
+
+@keyframes fade-inout{
+    0%{opacity: 1;}
+    50%{opacity: 1;}
+    85%{opacity: 0.5;}
+    100%{opacity: 0;}
+}
+
+.profession {
+    color: var(--text-color);
+    font-weight: 700;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+}
+
+.resume {
+    
+    padding: 0.2em 2em;
+    background-color: var(--bg-color);
+    box-shadow: 0px 0px 10px var(--box-shadow);
+    border: 1px solid var(--bg-color);
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.resumeTage{
+    margin-bottom: 7em;
+    
+}
+
+.resume:hover {
+
+    box-shadow: 0px -5px 7px var(--resume-box) inset;
+}
+
+.twitter, .linkedln,.github{
+    padding: 0.5em 1em;
+    display: flex;
+    background-color: var(--bg-color);
+    border: none;
+    box-shadow: 0px 0px 10px var(--box-shadow);
+    text-align: center;
+    cursor: pointer;
+}
+
+.twitter:hover{
+    box-shadow: 0px -5px 7px var(--resume-box) inset;
+}
+
+.linkedln:hover{
+    box-shadow: 0px -5px 7px var(--resume-box) inset;
+}
+
+.github:hover{
+    box-shadow: 0px -5px 7px var(--resume-box) inset;
+}
+
+.links {
+    box-shadow: 0px 0px 10px var(--box-shadow);
+    padding: 0.5em 1em;
+    background-color: var(--bg-color);
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+}
+
+
+.linkIconLight{
+    color: var(--text-color);
+
+}
+

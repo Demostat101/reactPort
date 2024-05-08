@@ -1,0 +1,6 @@
+main {
+    position: relative;
+    max-height: 100vh;
+    margin: 0 1em;
+    display: flex;
+}

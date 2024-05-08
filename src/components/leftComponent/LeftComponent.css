@@ -1,0 +1,91 @@
+
+
+.leftSide {
+    padding: 0em 1em;
+    display:flex;
+    flex-direction: column;
+    place-items: center;
+    text-align: center;
+    padding-top: 4em;
+    border-right: 1px solid #8f8c8c;
+    background-color: var(--bg-color);
+}
+
+.leftSideDark{
+    padding: 0em 1em;
+    display:flex;
+    flex-direction: column;
+    place-items: center;
+    text-align: center;
+    padding-top: 4em;
+    border-right: 1px solid #4e4c4c;
+    background-color: var(--bg-color);
+}
+
+.img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0px 5px 10px var(--image-color);
+    margin: 10px 10px;
+}
+
+.imageContainer{
+    border: 2px solid #E6E6E6;
+    width: 180px;
+    height: 180px;
+    display: grid;
+    justify-content: center;
+    place-items: center;
+    background-color: #E6E6E6;
+    box-shadow: 0px 0px 10px #a8a4a4;
+    border-radius: 20px;
+
+}
+
+.imageContainerDark{
+    border: 2px solid #222222;
+    background-color: #222222;
+    box-shadow: 0px 0px 10px #504b4b;
+    border-radius: 20px;
+    width: 180px;
+    display: grid;
+    justify-content: center;
+    place-items: center;
+
+}
+
+.name {
+    margin-block: 0.5em;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+.xLink{
+    margin-bottom: 1em;
+    color: var(--text-color);
+    font-weight: 600;
+    
+}
+
+.allLinks button,#upper {
+    width: 15em;
+    height: 2.5em;
+    background-color: var(--bg-color);
+    box-shadow: 0px 0px 10px var(--btnhover-color);
+    border: none;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+.allLinks button:hover {
+    border: 1px solid var(--btnhover-color);
+    box-shadow: 0px -5px 7px var(--btnhover-color) inset;
+}
+
+.about, .portfolio{
+    margin-block: 1em;
+}
