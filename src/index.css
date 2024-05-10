@@ -103,5 +103,20 @@
         padding-bottom: 5em;
     }
 
+    .preview1{
+        display: flex;
+        position: absolute;
+        bottom: 1em;
+        padding: 0.5em 1em;
+        background-color: #FFFFFF;
+        border: none;
+        box-shadow: 0px 0px 10px #6b6565;
+        font-weight: 600;
+    }
+
+    .first1{
+        position: relative;
+    }
+
 }
 
