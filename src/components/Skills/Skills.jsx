@@ -20,6 +20,7 @@ const Skills = () => {
 
             {
                 SkillsArray.map((val,index)=>{
+                  
                     return <div className="cards" key={index}>
 
                             <div className="cardLogo">{val.logo}</div>

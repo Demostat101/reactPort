@@ -1,35 +1,37 @@
 import { createContext, useContext, useEffect } from "react";
 import useLocalStorage from "use-local-storage";
+import { useState } from "react";
 
 export const ThemeContext = createContext();
 
-export const useTheme = () =>{
-
-    return useContext(ThemeContext);
+export const useTheme = () => {
+  return useContext(ThemeContext);
 };
 
-export const ThemeProvider = ({children}) => {
+export const ThemeProvider = ({ children }) => {
+  const [menu, setMenu] = useState(false);
 
-    const [isDarkMode, setIsDarkMode] =  useLocalStorage(false);
+  const handleMenuChange = () => {
+    setMenu((m) => !m);
+  };
 
-    const toggleTheme = () =>{    
+  const [isDarkMode, setIsDarkMode] = useLocalStorage(true);
 
-        setIsDarkMode((prevSate) => !prevSate);
-    };
+  const toggleTheme = () => {
+    setIsDarkMode((prevSate) => !prevSate);
+  };
 
-    const theme = isDarkMode ? "dark" : "light";
+  const theme = isDarkMode ? "dark" : "light";
 
-    useEffect(()=>{
-        document.documentElement.setAttribute("data-theme", theme)
-    },[isDarkMode])
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+  }, [isDarkMode]);
 
-    return (
-
-            <ThemeContext.Provider value={{theme, toggleTheme}}>
-
-                {children}
-
-            </ThemeContext.Provider>
-
-    )
-}
+  return (
+    <ThemeContext.Provider
+      value={{ theme, toggleTheme, menu, setMenu, handleMenuChange }}
+    >
+      {children}
+    </ThemeContext.Provider>
+  );
+};

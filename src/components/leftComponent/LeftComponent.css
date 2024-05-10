@@ -1,24 +1,13 @@
 
 
-.leftSide {
+#leftSide {
     padding: 0em 1em;
     display:flex;
     flex-direction: column;
     place-items: center;
     text-align: center;
     padding-top: 4em;
-    border-right: 1px solid #8f8c8c;
-    background-color: var(--bg-color);
-}
-
-.leftSideDark{
-    padding: 0em 1em;
-    display:flex;
-    flex-direction: column;
-    place-items: center;
-    text-align: center;
-    padding-top: 4em;
-    border-right: 1px solid #4e4c4c;
+    border-right: 1px solid var(--text-color);
     background-color: var(--bg-color);
 }
 

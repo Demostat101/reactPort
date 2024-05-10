@@ -1,41 +1,64 @@
-
-import React from 'react'
-import MyImage from "../../assets/images/my_pic1.jpg"
-import "./LeftComponent.css"
-import { useTheme } from '../../contextComponent/ThemeContext'
+import React from "react";
+import MyImage from "../../assets/images/my_pic1.jpg";
+import "./LeftComponent.css";
+import { useTheme } from "../../contextComponent/ThemeContext";
 
 const LeftComponent = () => {
-    const{theme} = useTheme()
+  const { theme, menu, handleMenuChange } = useTheme();
+
   return (
-    <div className={theme==="light"?"leftSide":"leftSideDark"}>
+    <div id="leftSide" className={menu ? "#leftSide active" : "#leftSide"}>
+      <div
+        className={theme === "light" ? "imageContainer" : "imageContainerDark"}
+      >
+        <img src={MyImage} alt="" className="img" />
+      </div>
 
-        <div className={theme==="light"?"imageContainer":"imageContainerDark"}><img src={MyImage} alt="" className="img"/></div>
-        <div className="name">OMIKUNLE ADEMOLA</div>
-        <small className="xLink">@DEMOSTAT101</small>
-        <div className="allLinks">
+      <div className="name">OMIKUNLE ADEMOLA</div>
 
-            <a href="#uppers" id="upper"><button className="home" id="button">Home</button></a>
+      <small className="xLink">@DEMOSTAT101</small>
 
-            <br />
+      <div className="allLinks">
+        <a href="#uppers" id="upper">
+          <button onClick={handleMenuChange} className="home" id="button">
+            Home
+          </button>
+        </a>
 
-            <a href="#about2" id="upper"><button className="about" id="button">About</button></a> 
+        <br />
 
-            <br />
+        <a href="#about2" id="upper">
+          <button className="about" id="button" onClick={handleMenuChange}>
+            About
+          </button>
+        </a>
 
-            <a href="#skills" id="upper"><button className="skills" id="Skills">Skills</button></a>
+        <br />
 
-            <br />
+        <a href="#skills" id="upper">
+          <button className="skills" id="Skills" onClick={handleMenuChange}>
+            Skills
+          </button>
+        </a>
 
-            <a href="#Portfolio" id="upper"><button className="portfolio" id="button">Portfolio</button></a>
-                    
-            <br />
+        <br />
 
-            <a href="#contactMe" id="upper"><button className="contact" id="button">Contact</button></a>
-                    
-        </div>
-      
+        <a href="#Portfolio" id="upper">
+          <button className="portfolio" id="button" onClick={handleMenuChange}>
+            Portfolio
+          </button>
+        </a>
+
+        <br />
+
+        <a href="#contactMe" id="upper">
+          <button className="contact" id="button" onClick={handleMenuChange}>
+            Contact
+          </button>
+        </a>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default LeftComponent
+export default LeftComponent;
