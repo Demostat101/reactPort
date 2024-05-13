@@ -2,7 +2,8 @@
 import React from 'react'
 import TopBar from '../TopBar/TopBar'
 import "./ContainerComponent.css"
-import Main from '../Main/Main'
+import MainComponent from '../Main/MainComponent'
+
 
 const ContainerComponent = () => {
 
@@ -10,7 +11,7 @@ const ContainerComponent = () => {
     <div className='container'>
 
         <TopBar/>
-        <Main/>
+        <MainComponent/>
       
     </div>
   )
