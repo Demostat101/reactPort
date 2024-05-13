@@ -4,6 +4,7 @@ import { RiLinkedinFill } from "react-icons/ri";
 import { FaGithub } from "react-icons/fa6";
 import "./Home.css"
 import { useTheme } from "../../contextComponent/ThemeContext";
+import Mycv from "./OmikunleAdemolaCv.pdf"
 
 
 const Home = () => {
@@ -15,7 +16,7 @@ const Home = () => {
 
       <small className="profession">I Am A Software Developer</small>
 
-      <a href="./AdemolaOmikunle.pdf" download="" className="resumeTage" >
+      <a href={Mycv} className="resumeTage" target="_blank">
         <button className="resume">
           MY RESUME
         </button>

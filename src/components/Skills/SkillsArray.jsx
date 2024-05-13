@@ -8,6 +8,7 @@ import { SiExpress } from "react-icons/si"
 import { FaGit } from "react-icons/fa"
 import { SiVisualstudiocode } from "react-icons/si"
 import { FaGithub } from "react-icons/fa6"
+import { DiMongodb } from "react-icons/di"
 
 
 
@@ -41,6 +42,10 @@ export const SkillsArray = [
     {
         name:"EXPRESS JS",
         logo:<SiExpress size={30}/>
+    },
+    {
+        name:"MONGODB",
+        logo:<DiMongodb size={30}/>
     },
     {
         name:"GIT",
